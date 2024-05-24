@@ -29,7 +29,7 @@ index 4304e52..57da1b2 100644
                              }
                          }
 -                        if ( $db_count + $cart_count > $this->getAppointmentsLimit() ) {
-+                        $limit = apply_filters( 'bookly_appointments_limit', $this->getAppointmentsLimit(), $service_id, $customer_id );
++                        $limit = apply_filters( 'bookly_appointments_limit', $this->getAppointmentsLimit(), $service_id, $customer_id, $appointment_dates );
 ++                       if ( $db_count + $cart_count > $limit ) {
                              return true;
                          }

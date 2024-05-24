@@ -42,7 +42,7 @@ add_action( 'init', 'dfr_bagbl_init' );
  * In bookly-responsive-appointment-booking-tool/lib/entities/Service.php, inside appointmentsLimitReached method, line ~375
  * Add the following filter:
  *
- * $limit = apply_filters( 'bookly_appointments_limit', $this->getAppointmentsLimit(), $service_id, $customer_id );
+ * $limit = apply_filters( 'bookly_appointments_limit', $this->getAppointmentsLimit(), $service_id, $customer_id, $appointment_dates );
  * if ( $db_count + $cart_count > $limit ) {
  *   return true;
  * }
